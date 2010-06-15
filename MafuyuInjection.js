@@ -55,18 +55,26 @@ function didKeyPress(keyEvent) {
 	}
 }
 
-function disable() {
-	document.removeEventListener("keypress", didKeyPress, false);
+function didKeyDownInField(keyEvent) {
+	if(keyEvent.keyCode == 27) { // 27 == ESC
+		keyEvent.target.blur();
+	}
 }
 
-function enable() {
+function disableNavigation() {
+	document.removeEventListener("keypress", didKeyPress, false);
+	document.querySelectorAll('.lst[name="q"]')[0].addEventListener("keydown", didKeyDownInField, false);
+}
+
+function enableNavigation() {
 	document.addEventListener("keypress", didKeyPress, false);
+	document.querySelectorAll('.lst[name="q"]')[0].removeEventListener("keydown", didKeyDownInField, false);
 }
 
 setUpKeyEvents();
-enable();
+enableNavigation();
 var inputs = document.getElementsByTagName("input");
 for(var i = 0; i < inputs.length; i++) {
-	inputs[i].addEventListener("focus", disable);
-	inputs[i].addEventListener("blur", enable);
+	inputs[i].addEventListener("focus", disableNavigation);
+	inputs[i].addEventListener("blur", enableNavigation);
 }
