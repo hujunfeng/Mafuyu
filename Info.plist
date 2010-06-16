@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Mafuyu</string>
 	<key>CFBundleIdentifier</key>
-	<string>jp.s-take.Mafuyu</string>
+	<string>me.takeba.Mafuyu</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -32,11 +32,19 @@
 		<key>Whitelist</key>
 		<array>
 			<string>http://www.google.com/search*</string>
+			<string>http://www.google.co.in/search*</string>
+			<string>http://www.google.com.hk/search*</string>
+			<string>http://www.google.de/search*</string>
+			<string>http://www.google.co.uk/search*</string>
+			<string>http://www.google.fr/search*</string>
 			<string>http://www.google.co.jp/search*</string>
+			<string>http://www.google.com.br/search*</string>
+			<string>http://www.google.it/search*</string>
+			<string>http://www.google.es/search*</string>
 		</array>
 	</dict>
 	<key>Description</key>
-	<string>One-type shortcut for Google</string>
+	<string>Adds keyboard shortcuts to Google results pages.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -48,8 +56,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://sites.google.com/site/stakeannex/softwares/safari-ext/mafuyu/downloads/update.plist?attredirects=0&amp;d=1</string>
+	<string>http://bitbucket.org/s.take/mafuyu/raw/tip/Manifest.plist</string>
 	<key>Website</key>
-	<string>http://sites.google.com/site/stakeannex/</string>
+	<string>http://bitbucket.org/s.take/mafuyu/</string>
 </dict>
 </plist>
