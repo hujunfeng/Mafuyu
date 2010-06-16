@@ -29,7 +29,7 @@ function setUpKeyEvents() {
 }
 
 function didKeyPress(keyEvent) {
-	if(keyEvent.altKey || keyEvent.metaKey || keyEvent.ctrlKey) {
+	if(keyEvent.altKey || keyEvent.metaKey) {
 		return false;
 	}
 	var eventTarget = null;
@@ -50,7 +50,7 @@ function didKeyPress(keyEvent) {
 	}
 	if(eventTarget) {
 		var mouseEvent = document.createEvent("MouseEvent");
-		mouseEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+		mouseEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, keyEvent.ctrlKey, 0, null);
 		eventTarget.dispatchEvent(mouseEvent);
 	}
 }
