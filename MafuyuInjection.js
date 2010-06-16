@@ -4,7 +4,11 @@ var navigationNext;
 
 function setUpKeyEvents() {
 	searchResults = document.querySelectorAll(".g .r .l");
-	for(var i = 0; i < searchResults.length; i++) {
+	var n = searchResults.length;
+	if(n > 10) {
+		n = 10;
+	}
+	for(var i = 0; i < n; i++) {
 		var numberLabel = document.createElement("span");
 		numberLabel.className = "Mafuyu_numberLabel";
 		var num = i + 1;
