@@ -41,6 +41,7 @@
 			<string>http://www.google.com.br/search*</string>
 			<string>http://www.google.it/search*</string>
 			<string>http://www.google.es/search*</string>
+			<string>http://www.google.ch/search*</string>
 		</array>
 	</dict>
 	<key>Description</key>
