@@ -1,20 +1,20 @@
-var searchResults;
+var resultItems;
 var navigationPrevious;
 var navigationNext;
 
 function setUpKeyEvents() {
-	searchResults = document.querySelectorAll(".g .r .l");
-	var n = searchResults.length;
+	resultItems = document.querySelectorAll(".g .r .l");
+	var n = resultItems.length;
 	if(n > 10) {
 		n = 10;
 	}
 	for(var i = 0; i < n; i++) {
 		var numberLabel = document.createElement("span");
 		numberLabel.className = "Mafuyu_numberLabel";
-		var num = i + 1;
-		if(num == 10) num = 0;
-		numberLabel.appendChild(document.createTextNode(num));
-		searchResults[i].parentNode.appendChild(numberLabel);
+		var labelIndex = i + 1;
+		if(labelIndex == 10) labelIndex = 0;
+		numberLabel.appendChild(document.createTextNode(labelIndex));
+		resultItems[i].parentNode.appendChild(numberLabel);
 	}
 	var navs = document.querySelectorAll(".b .pn");
 	if(navs.length == 2) {
@@ -50,7 +50,7 @@ function didKeyPress(keyEvent) {
 	else {
 		var i = keyEvent.keyCode - 48 - 1; // 48 == '0'
 		if(i == -1) i = 9;
-		eventTarget = searchResults[i];
+		eventTarget = resultItems[i];
 	}
 	if(eventTarget) {
 		var mouseEvent = document.createEvent("MouseEvent");
