@@ -3,6 +3,11 @@ var navigationPrevious;
 var navigationNext;
 
 function setUpKeyEvents() {
+	setUpResultItemKeyEvents();
+	setUpPageNavigationKeyEvents();
+}
+
+function setUpResultItemKeyEvents() {
 	resultItems = document.querySelectorAll(".g .r .l");
 	var n = resultItems.length;
 	if(n > 10) {
@@ -16,6 +21,9 @@ function setUpKeyEvents() {
 		numberLabel.appendChild(document.createTextNode(labelIndex));
 		resultItems[i].parentNode.appendChild(numberLabel);
 	}
+}
+
+function setUpPageNavigationKeyEvents() {
 	var navs = document.querySelectorAll(".b .pn");
 	if(navs.length == 2) {
 		navigationPrevious = navs[0];
