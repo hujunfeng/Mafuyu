@@ -1,8 +1,5 @@
 .Mafuyu_numberLabel {
-	color : gray;
+	color : #9FB3ED;
 	margin : 0 0.5em 0 0.5em;
 	padding : 0 5px 0 5px;
-	border-radius: 10px;
-	border : 1px solid #ffa;
-	background-color : #ffa;
 }
