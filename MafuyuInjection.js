@@ -16,9 +16,8 @@ function setUpResultItemKeyEvents() {
 	for(var i = 0; i < n; i++) {
 		var numberLabel = document.createElement("span");
 		numberLabel.className = "Mafuyu_numberLabel";
-		var labelIndex = i + 1;
-		if(labelIndex == 10) labelIndex = 0;
-		numberLabel.appendChild(document.createTextNode(labelIndex));
+    var unicodeNum = 0x2488 + i; 
+    numberLabel.appendChild(document.createTextNode(String.fromCharCode(unicodeNum)));
 		resultItems[i].parentNode.appendChild(numberLabel);
 	}
 }
