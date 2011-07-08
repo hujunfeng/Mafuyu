@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>S.Takebayashi</string>
+	<string>S.Takebayashi (Mod by Hu Junfeng)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Mafuyu</string>
 	<key>CFBundleIdentifier</key>
-	<string>me.takeba.Mafuyu</string>
+	<string>me.takeba.MafuyuMod</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.3</string>
+	<string>1.2.4</string>
 	<key>CFBundleVersion</key>
-	<string>123</string>
+	<string>124</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -59,8 +59,6 @@
 			<string>All</string>
 		</dict>
 	</dict>
-	<key>Update Manifest URL</key>
-	<string>http://bitbucket.org/s.take/mafuyu/raw/tip/Manifest.plist</string>
 	<key>Website</key>
 	<string>http://blog.takeba.me/2010/07/safari-mafuyu.html</string>
 </dict>
