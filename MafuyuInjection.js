@@ -1,6 +1,7 @@
 var resultItems;
 var navigationPrevious;
 var navigationNext;
+var newTabDefault;
 
 function setUpKeyEvents() {
 	setUpResultItemKeyEvents();
@@ -61,7 +62,8 @@ function didKeyPress(keyEvent) {
 	}
 	if(eventTarget) {
 		var mouseEvent = document.createEvent("MouseEvent");
-		mouseEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, keyEvent.ctrlKey, 0, null);
+    var modifierKey = newTabDefault ? !keyEvent.ctrlKey : keyEvent.ctrlKey;
+		mouseEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, modifierKey, 0, null);
 		eventTarget.dispatchEvent(mouseEvent);
 	}
 }
@@ -89,3 +91,16 @@ for(var i = 0; i < inputs.length; i++) {
 	inputs[i].addEventListener("focus", disableNavigation);
 	inputs[i].addEventListener("blur", enableNavigation);
 }
+
+function waitForSettingValue(event) {
+  switch (event.name) {
+    case "settingValue":
+      newTabDefault = event.message;
+      break;
+    default:
+      break;
+  }
+}
+
+safari.self.addEventListener("message", waitForSettingValue, false);
+safari.self.tab.dispatchMessage("getSettingValue", "newTabDefault");
